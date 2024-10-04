@@ -1,4 +1,9 @@
-data/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+All_Product_Compatibilities.csv
 *.csv
-model.joblib
-label_encoder.joblib
+
