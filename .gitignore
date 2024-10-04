@@ -1,3 +1,4 @@
+# This file tells Git which files or directories to ignore. For Python projects, you can use the following
 __pycache__/
 *.pyc
 *.pyo
