@@ -57,3 +57,57 @@ To run this project locally, follow the steps below:
 ```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
+
+### 2. Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # For Linux or MacOS
+venv\Scripts\activate  # For Windows
+
+### 3. Install dependencies
+pip install -r requirements.txt
+
+### 4. Prepare the datasets
+Make sure you have the following CSV files in the root directory:
+    merged_equipment.csv
+    Clean Dinex Catalogue.csv
+
+### 5. Run the application
+python main.py
+
+### 6. Predict Product Compatibility
+You will be prompted to enter a ZIP code. The system will then display the
+top 10 recommended products based on fleet size predictions for that ZIP code.
+
+## Project Structure
+
+├── main.py                            # Main Python script that runs the program
+├── merged_equipment.csv              # Dataset with equipment information (not included in repo)
+├── Clean Dinex Catalogue.csv         # Dataset with product catalog information (not included in repo)
+├── All_Product_Compatibilities.csv   # Output CSV file with merged product compatibilities
+├── requirements.txt                  # Dependencies for the project
+├── Procfile                          # optional Configuration file for deployment (e.g., Heroku)
+└── .gitignore                        # Git ignore file
+
+## Sample Input/Output
+
+Input
+Enter a zipcode to find the top 10 products:
+
+Output
+Enter a zipcode to find the top 10 products:  33435
+
+Top 10 Recommended Products:
+        Dinex Product Dinex Number  2024 Compatible VIOs
+194348      PM sensor       8CL009                 130.0
+692466       Injector       2AT002                  64.0
+660945       Injector       8CL010                  64.0
+5618320      Injector       5EL088                  64.0
+3739916      Injector       3FL021                  64.0
+201289       Injector       8CL012                  64.0
+2483154      Injector       5EL061                  64.0
+3148652    NOX Sensor       5EL004                  61.0
+166584     NOX Sensor       8CL001                  61.0
+4491402    NOX Sensor        22025                  61.0
+
+
+
