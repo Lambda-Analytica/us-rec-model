@@ -1,1 +1,2 @@
+# Only necessary for deploying via Heroku
 web: gunicorn app.main:app
